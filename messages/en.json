@@ -10,7 +10,7 @@
     "hero": {
         "title1": "Make Commercial",
         "title2": "Decisions with Confidence",
-        "description": "Estimify leverages advanced analysis to identify and evaluate construction project risks across design, operations, and logistics covering both operational and on-site work risks to support informed commercial decisions with clarity, accuracy, and confidence.",
+        "description": "Estimify leverages advanced analysis to identify and evaluate project risks across design, operations, and logistics covering both operational and on-site work risks to support informed commercial decisions with clarity, accuracy, and confidence.",
         "cta": "Start Free Assessment →"
     },
     "about": {
@@ -177,10 +177,10 @@
             "action2": "Verify site access availability before mobilization",
             "action3": "Secure back-to-back warranty from suppliers",
             "riskLegend": "Risk Severity Legend:",
-            "critical": "Critical",
-            "major": "Major",
-            "moderate": "Moderate",
-            "low": "Low",
+            "critical": "High risk or critical",
+            "major": "Medium risk",
+            "moderate": "Recommendations",
+            "low": "Ideal or low risk",
             "saveProject": "Save Project",
             "generateContract": "Generate Contract",
             "generateProposal": "Generate Proposal"

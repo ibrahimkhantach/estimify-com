@@ -20,22 +20,6 @@ export const Footer: React.FC = () => {
         <footer className="bg-[#0A0F1A] border-t border-white/5">
             <div className="container mx-auto px-4 sm:px-6 py-10 sm:py-14">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-                    {/* Brand Section */}
-                    <div className="space-y-4">
-                        <Link href="/" className="inline-block">
-                            <div className="relative h-8 w-32">
-                                <Image
-                                    src="/full-logo.png"
-                                    alt="Estimify Logo"
-                                    fill
-                                    className="object-contain"
-                                />
-                            </div>
-                        </Link>
-                        <p className="text-sm text-gray-400 leading-relaxed max-w-xs">
-                            {t("footer.tagline")}
-                        </p>
-                    </div>
 
                     {/* Navigation Links */}
                     <div className="space-y-4">
