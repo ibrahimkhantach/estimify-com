@@ -23,13 +23,13 @@ const WizardContent = () => {
             }
         } else {
             // Default to step 1 if no param
-            router.replace('/?step=1', { scroll: false });
+            router.replace('/wizard?step=1', { scroll: false });
         }
     }, [searchParams, router]);
 
     const handleStepChange = (step: number) => {
         setCurrentStep(step);
-        router.push(`/?step=${step}`, { scroll: false });
+        router.push(`/wizard?step=${step}`, { scroll: false });
     };
 
     const nextStep = () => {

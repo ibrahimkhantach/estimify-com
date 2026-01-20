@@ -3,30 +3,30 @@
 import React from 'react';
 
 const FeatureCard = ({ icon, title, description }: { icon: React.ReactNode, title: string, description: string }) => (
-    <div className="group relative p-8 rounded-2xl bg-[#131B2C] border border-white/5 hover:border-[#00B8DB]/30 transition-all duration-300 hover:shadow-2xl hover:shadow-[#00B8DB]/10">
+    <div className="group relative p-6 sm:p-8 rounded-2xl bg-[#131B2C] border border-white/5 hover:border-[#00B8DB]/30 transition-all duration-300 hover:shadow-2xl hover:shadow-[#00B8DB]/10">
         <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-        <div className="relative z-10 flex flex-col items-center text-center space-y-4">
-            <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-[#00B8DB] shadow-lg shadow-[#00B8DB]/20 text-white mb-2">
+        <div className="relative z-10 flex flex-col items-center text-center space-y-3 sm:space-y-4">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-xl bg-[#00B8DB] shadow-lg shadow-[#00B8DB]/20 text-white mb-1 sm:mb-2">
                 {icon}
             </div>
-            <h3 className="text-xl font-bold text-white">{title}</h3>
-            <p className="text-sm text-gray-400 leading-relaxed">{description}</p>
+            <h3 className="text-lg sm:text-xl font-bold text-white">{title}</h3>
+            <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">{description}</p>
         </div>
     </div>
 );
 
 export const Features: React.FC = () => {
     return (
-        <section id="how-it-works" className="py-24 bg-[#0B1120]">
-            <div className="container mx-auto px-4 max-w-6xl">
-                <div className="text-center mb-16 space-y-4">
-                    <h2 className="text-3xl md:text-4xl font-bold text-white">How Estimify Works</h2>
-                    <p className="text-gray-400 max-w-2xl mx-auto">
+        <section id="how-it-works" className="py-16 sm:py-24 bg-[#0B1120]">
+            <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
+                <div className="text-center mb-10 sm:mb-16 space-y-3 sm:space-y-4">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">How Estimify Works</h2>
+                    <p className="text-sm sm:text-base text-gray-400 max-w-2xl mx-auto px-2 sm:px-0">
                         A seamless process from data input to actionable commercial intelligence.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
                     <FeatureCard
                         title="Input Data"
                         description="Provide comprehensive project details, financials, and contract terms through our intuitive assessment wizard."

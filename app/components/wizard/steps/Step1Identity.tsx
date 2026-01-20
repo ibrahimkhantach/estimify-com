@@ -16,31 +16,31 @@ export const Step1Identity: React.FC<Step1Props> = ({ onNext }) => {
     const [distance, setDistance] = useState<'remote' | 'onsite'>('remote');
 
     return (
-        <Card className="p-6 md:p-8 space-y-8 bg-card/80 backdrop-blur-xl border border-white/10 shadow-2xl">
+        <Card className="p-4 sm:p-6 md:p-8 space-y-6 sm:space-y-8 bg-card/80 backdrop-blur-xl border border-white/10 shadow-2xl">
             <div className="space-y-2">
-                <h2 className="text-2xl font-semibold text-white">Project Identity</h2>
-                <p className="text-muted-foreground">Define the core parameters of your estimation context.</p>
+                <h2 className="text-xl sm:text-2xl font-semibold text-white">Project Identity</h2>
+                <p className="text-sm sm:text-base text-muted-foreground">Define the core parameters of your estimation context.</p>
             </div>
 
             <div className="space-y-6">
                 {/* Analysis Type */}
                 <div className="space-y-3">
                     <label className="text-sm font-medium text-muted-foreground">Analysis Type</label>
-                    <div className="flex gap-4">
+                    <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                         <Card
                             selected={analysisType === 'full'}
                             onClick={() => setAnalysisType('full')}
-                            className="flex-1 p-4 flex items-center justify-center gap-2 hover:bg-secondary/40 transition-all"
+                            className="flex-1 p-3 sm:p-4 flex items-center justify-center gap-2 hover:bg-secondary/40 transition-all"
                         >
-                            <span className="font-medium">Full Analysis</span>
+                            <span className="font-medium text-sm sm:text-base">Full Analysis</span>
                             {analysisType === 'full' && <Badge variant="default" className="ml-2">Recommended</Badge>}
                         </Card>
                         <Card
                             selected={analysisType === 'risk'}
                             onClick={() => setAnalysisType('risk')}
-                            className="flex-1 p-4 flex items-center justify-center gap-2 hover:bg-secondary/40 transition-all"
+                            className="flex-1 p-3 sm:p-4 flex items-center justify-center gap-2 hover:bg-secondary/40 transition-all"
                         >
-                            <span className="font-medium">Risk Assessment</span>
+                            <span className="font-medium text-sm sm:text-base">Risk Assessment</span>
                         </Card>
                     </div>
                 </div>

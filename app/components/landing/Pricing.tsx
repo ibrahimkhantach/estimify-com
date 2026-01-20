@@ -5,9 +5,9 @@ import Link from 'next/link';
 import { Button } from '@/app/ui/Button';
 
 const PricingCard = ({ title, price, features, recommended = false, onClick }: any) => (
-    <div className={`relative flex flex-col p-8 rounded-2xl border transition-all duration-300 h-full
+    <div className={`relative flex flex-col p-6 sm:p-8 rounded-2xl border transition-all duration-300 h-full
         ${recommended
-            ? 'bg-[#131B2C] border-[#00B8DB] shadow-2xl shadow-[#00B8DB]/10 scale-105 z-10'
+            ? 'bg-[#131B2C] border-[#00B8DB] shadow-2xl shadow-[#00B8DB]/10 md:scale-105 z-10'
             : 'bg-[#0F1623] border-white/5 hover:border-white/10'}`}>
 
         {recommended && (
@@ -16,18 +16,18 @@ const PricingCard = ({ title, price, features, recommended = false, onClick }: a
             </div>
         )}
 
-        <div className="mb-8">
-            <h3 className="text-xl font-bold text-white mb-2">{title}</h3>
+        <div className="mb-6 sm:mb-8">
+            <h3 className="text-lg sm:text-xl font-bold text-white mb-2">{title}</h3>
             {price ? (
                 <div className="flex items-baseline gap-1 animate-in slide-in-from-bottom-2 fade-in duration-500">
-                    <span className="text-3xl font-bold text-white">{price}</span>
+                    <span className="text-2xl sm:text-3xl font-bold text-white">{price}</span>
                 </div>
             ) : (
                 <span className="text-gray-400">Perfect for initial evaluation</span>
             )}
         </div>
 
-        <ul className="space-y-4 mb-8 flex-grow">
+        <ul className="space-y-3 sm:space-y-4 mb-6 sm:mb-8 flex-grow">
             {features.map((feature: string, i: number) => (
                 <li key={i} className="flex gap-3 items-start text-sm text-gray-300">
                     <div className="mt-0.5 w-4 h-4 rounded-full bg-[#00B8DB] flex items-center justify-center shrink-0">
@@ -54,11 +54,11 @@ const PricingCard = ({ title, price, features, recommended = false, onClick }: a
 
 export const Pricing: React.FC = () => {
     return (
-        <section id="pricing" className="py-24 bg-[#0B1120] relative">
-            <div className="container mx-auto px-4 max-w-5xl">
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-16">Transparent Pricing</h2>
+        <section id="pricing" className="py-16 sm:py-24 bg-[#0B1120] relative">
+            <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-white mb-10 sm:mb-16">Transparent Pricing</h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-4xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-stretch max-w-4xl mx-auto">
                     <PricingCard
                         title="Free Preview"
                         features={[

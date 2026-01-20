@@ -5,6 +5,7 @@ import { Hero } from './Hero';
 import { About } from './About';
 import { Features } from './Features';
 import { Pricing } from './Pricing';
+import { Footer } from '../layout/Footer';
 
 export const LandingPage: React.FC = () => {
     return (
@@ -13,11 +14,7 @@ export const LandingPage: React.FC = () => {
             <About />
             <Features />
             <Pricing />
-
-            {/* Simple Footer */}
-            <footer className="py-8 border-t border-white/5 text-center text-sm text-gray-500">
-                <p>&copy; {new Date().getFullYear()} Estimify. All rights reserved.</p>
-            </footer>
+            <Footer />
         </main>
     );
 };
