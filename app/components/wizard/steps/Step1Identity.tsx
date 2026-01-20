@@ -6,56 +6,58 @@ import { Input } from '@/app/ui/Input';
 import { Select } from '@/app/ui/Select';
 import { Button } from '@/app/ui/Button';
 import { Badge } from '@/app/ui/Badge';
+import { useI18n } from '@/app/lib/i18n';
 
 interface Step1Props {
     onNext: () => void;
 }
 
 export const Step1Identity: React.FC<Step1Props> = ({ onNext }) => {
+    const { t } = useI18n();
     const [analysisType, setAnalysisType] = useState<'full' | 'risk'>('full');
     const [distance, setDistance] = useState<'remote' | 'onsite'>('remote');
 
     return (
         <Card className="p-4 sm:p-6 md:p-8 space-y-6 sm:space-y-8 bg-card/80 backdrop-blur-xl border border-white/10 shadow-2xl">
             <div className="space-y-2">
-                <h2 className="text-xl sm:text-2xl font-semibold text-white">Project Identity</h2>
-                <p className="text-sm sm:text-base text-muted-foreground">Define the core parameters of your estimation context.</p>
+                <h2 className="text-xl sm:text-2xl font-semibold text-white">{t("wizard.step1.title")}</h2>
+                <p className="text-sm sm:text-base text-muted-foreground">{t("wizard.step1.subtitle")}</p>
             </div>
 
             <div className="space-y-6">
                 {/* Analysis Type */}
                 <div className="space-y-3">
-                    <label className="text-sm font-medium text-muted-foreground">Analysis Type</label>
+                    <label className="text-sm font-medium text-muted-foreground">{t("wizard.step1.analysisType")}</label>
                     <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                         <Card
                             selected={analysisType === 'full'}
                             onClick={() => setAnalysisType('full')}
                             className="flex-1 p-3 sm:p-4 flex items-center justify-center gap-2 hover:bg-secondary/40 transition-all"
                         >
-                            <span className="font-medium text-sm sm:text-base">Full Analysis</span>
-                            {analysisType === 'full' && <Badge variant="default" className="ml-2">Recommended</Badge>}
+                            <span className="font-medium text-sm sm:text-base">{t("wizard.step1.fullAnalysis")}</span>
+                            {analysisType === 'full' && <Badge variant="default" className="ml-2">{t("wizard.step1.recommended")}</Badge>}
                         </Card>
                         <Card
                             selected={analysisType === 'risk'}
                             onClick={() => setAnalysisType('risk')}
                             className="flex-1 p-3 sm:p-4 flex items-center justify-center gap-2 hover:bg-secondary/40 transition-all"
                         >
-                            <span className="font-medium text-sm sm:text-base">Risk Assessment</span>
+                            <span className="font-medium text-sm sm:text-base">{t("wizard.step1.riskAssessment")}</span>
                         </Card>
                     </div>
                 </div>
 
                 {/* Business Type */}
                 <Input
-                    label="Business Type"
-                    placeholder="e.g. Design Agency, Construction Firm..."
+                    label={t("wizard.step1.businessType")}
+                    placeholder={t("wizard.step1.businessPlaceholder")}
                     defaultValue="Agency"
                 />
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {/* Country */}
                     <Select
-                        label="Target Country"
+                        label={t("wizard.step1.targetCountry")}
                         options={[
                             { value: 'SA', label: 'Saudi Arabia' },
                             { value: 'AE', label: 'United Arab Emirates' },
@@ -66,7 +68,7 @@ export const Step1Identity: React.FC<Step1Props> = ({ onNext }) => {
 
                     {/* Currency */}
                     <Select
-                        label="Currency"
+                        label={t("wizard.step1.currency")}
                         options={[
                             { value: 'SAR', label: 'SAR - Saudi Riyal' },
                             { value: 'AED', label: 'AED - UAE Dirham' },
@@ -78,7 +80,7 @@ export const Step1Identity: React.FC<Step1Props> = ({ onNext }) => {
 
                 {/* Project Distance */}
                 <div className="space-y-3">
-                    <label className="text-sm font-medium text-muted-foreground">Project Distance</label>
+                    <label className="text-sm font-medium text-muted-foreground">{t("wizard.step1.projectDistance")}</label>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <Card
                             selected={distance === 'remote'}
@@ -91,8 +93,8 @@ export const Step1Identity: React.FC<Step1Props> = ({ onNext }) => {
                                 </svg>
                             </div>
                             <div>
-                                <div className="font-medium">Remote Delivery</div>
-                                <div className="text-xs text-muted-foreground">Off-site execution</div>
+                                <div className="font-medium">{t("wizard.step1.remoteDelivery")}</div>
+                                <div className="text-xs text-muted-foreground">{t("wizard.step1.remoteSubtitle")}</div>
                             </div>
                         </Card>
 
@@ -107,8 +109,8 @@ export const Step1Identity: React.FC<Step1Props> = ({ onNext }) => {
                                 </svg>
                             </div>
                             <div>
-                                <div className="font-medium">On-site Delivery</div>
-                                <div className="text-xs text-muted-foreground">Requires physical presence</div>
+                                <div className="font-medium">{t("wizard.step1.onsiteDelivery")}</div>
+                                <div className="text-xs text-muted-foreground">{t("wizard.step1.onsiteSubtitle")}</div>
                             </div>
                         </Card>
                     </div>
@@ -117,8 +119,8 @@ export const Step1Identity: React.FC<Step1Props> = ({ onNext }) => {
 
             <div className="flex justify-end pt-4">
                 <Button onClick={onNext} size="lg" className="px-8 shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all duration-300">
-                    Continue to Scope
-                    <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    {t("wizard.step1.continueToScope")}
+                    <svg className="w-4 h-4 ms-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                     </svg>
                 </Button>

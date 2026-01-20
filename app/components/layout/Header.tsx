@@ -4,26 +4,29 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/app/ui/Button';
+import { useI18n } from '@/app/lib/i18n';
 
 export const Header: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const { t, locale, setLocale, dir } = useI18n();
 
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
     const closeMenu = () => setIsMenuOpen(false);
 
     const navLinks = [
-        { href: "/#how-it-works", label: "How Estimify Works" },
-        { href: "/#about", label: "About" },
-        { href: "/#pricing", label: "Pricing" },
-        { href: "/contact", label: "Contact" },
+        { href: "/projects", label: t("header.myProjects") },
+        { href: "/#how-it-works", label: t("header.howItWorks") },
+        { href: "/#about", label: t("header.about") },
+        { href: "/#pricing", label: t("header.pricing") },
+        { href: "/contact", label: t("header.contact") },
     ];
 
     return (
         <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-[#0B1120]/80 backdrop-blur-md">
             <div className="container mx-auto px-4 h-16 flex items-center justify-between">
                 {/* Logo */}
-                <Link href="/" className="flex items-center gap-2">
-                    <div className="relative h-8 w-32">
+                <Link href="/" className="flex items-center gap-3">
+                    <div className="relative h-10 w-10 sm:h-12 sm:w-12">
                         <Image
                             src="/full-logo.png"
                             alt="Estimify Logo"
@@ -32,6 +35,9 @@ export const Header: React.FC = () => {
                             priority
                         />
                     </div>
+                    <span className="text-base sm:text-lg font-bold text-white">
+                        Estimify<span className="text-[#00B8DB]">.co</span>
+                    </span>
                 </Link>
 
                 {/* Desktop Nav */}
@@ -48,10 +54,18 @@ export const Header: React.FC = () => {
                 </nav>
 
                 {/* Actions */}
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-3">
+                    {/* Language Switcher */}
+                    <button
+                        onClick={() => setLocale(locale === 'en' ? 'ar' : 'en')}
+                        className="px-3 py-1.5 text-xs font-medium text-white/80 hover:text-white bg-white/5 hover:bg-white/10 rounded-md transition-colors"
+                    >
+                        {locale === 'en' ? 'عربي' : 'EN'}
+                    </button>
+
                     <Link href="/wizard" className="hidden sm:block">
                         <Button variant="primary" size="sm" className="bg-[#00B8DB] hover:bg-[#00B8DB]/90 text-white font-semibold">
-                            Get Started
+                            {t("header.getStarted")}
                         </Button>
                     </Link>
 
@@ -88,10 +102,19 @@ export const Header: React.FC = () => {
                                 {link.label}
                             </Link>
                         ))}
-                        <div className="pt-4 border-t border-white/10">
+                        <div className="pt-4 border-t border-white/10 space-y-3">
+                            <button
+                                onClick={() => {
+                                    setLocale(locale === 'en' ? 'ar' : 'en');
+                                    closeMenu();
+                                }}
+                                className="w-full px-4 py-2 text-sm font-medium text-white/80 bg-white/5 hover:bg-white/10 rounded-md transition-colors"
+                            >
+                                {locale === 'en' ? 'العربية' : 'English'}
+                            </button>
                             <Link href="/wizard" onClick={closeMenu}>
                                 <Button fullWidth variant="primary" className="bg-[#00B8DB] hover:bg-[#00B8DB]/90 text-white font-semibold">
-                                    Get Started
+                                    {t("header.getStarted")}
                                 </Button>
                             </Link>
                         </div>

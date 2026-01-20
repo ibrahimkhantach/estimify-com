@@ -1,0 +1,221 @@
+{
+    "header": {
+        "myProjects": "My Projects",
+        "howItWorks": "How Estimify Works",
+        "about": "About",
+        "pricing": "Pricing",
+        "contact": "Contact",
+        "getStarted": "Get Started"
+    },
+    "hero": {
+        "title1": "Make Commercial",
+        "title2": "Decisions with Confidence",
+        "description": "Estimify leverages advanced analysis to identify and evaluate construction project risks across design, operations, and logistics covering both operational and on-site work risks to support informed commercial decisions with clarity, accuracy, and confidence.",
+        "cta": "Start Free Assessment →"
+    },
+    "about": {
+        "title": "About Estimify",
+        "description": "Estimify is revolutionizing construction project evaluation by combining advanced analysis with deep industry expertise. We empower construction professionals, financial institutions, and project developers to make data-driven commercial decisions with unprecedented confidence and clarity."
+    },
+    "features": {
+        "title": "How Estimify Works",
+        "subtitle": "A seamless process from data input to actionable commercial intelligence.",
+        "inputData": {
+            "title": "Input Data",
+            "description": "Provide comprehensive project details, financials, and contract terms through our intuitive assessment wizard."
+        },
+        "analysis": {
+            "title": "Analysis",
+            "description": "Our advanced algorithms analyze patterns across thousands of projects to identify risks and opportunities."
+        },
+        "decisionReport": {
+            "title": "Decision Report",
+            "description": "Receive an executive-grade report with clear recommendations and actionable insights for your team."
+        },
+        "professionalDocs": {
+            "title": "Professional Docs",
+            "description": "Generate concise, credible, and well-structured documents that support informed decision making."
+        }
+    },
+    "pricing": {
+        "title": "Transparent Pricing",
+        "freePreview": {
+            "title": "Free Preview",
+            "subtitle": "Perfect for initial evaluation",
+            "features": [
+                "1 Basic risk assessment",
+                "Limited project data",
+                "5 page summary report"
+            ],
+            "cta": "Get Started"
+        },
+        "fullReport": {
+            "title": "Full Report",
+            "price": "14.99$",
+            "recommended": "Recommended",
+            "features": [
+                "Unlimited Complete risk assessment",
+                "Unlimited project data",
+                "20+ page detailed report",
+                "PDF export & analytics"
+            ],
+            "cta": "Start Full Assessment"
+        }
+    },
+    "footer": {
+        "tagline": "Empowering construction professionals to make data-driven commercial decisions with confidence.",
+        "quickLinks": "Quick Links",
+        "getStarted": "Get Started",
+        "readyText": "Ready to transform your project estimation?",
+        "startAssessment": "Start Free Assessment",
+        "copyright": "Estimify. All rights reserved.",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service"
+    },
+    "wizard": {
+        "layout": {
+            "title": "Smart Assessment Wizard",
+            "subtitle": "Professional project estimation & risk analysis intelligence."
+        },
+        "roleSelection": {
+            "title": "Welcome to Estimify",
+            "subtitle": "Choose your role to get a personalized assessment experience.",
+            "seller": {
+                "title": "I'm a Seller",
+                "description": "Selling a project, asset, or construction business",
+                "cta": "Select Seller"
+            },
+            "buyer": {
+                "title": "I'm a Buyer",
+                "description": "Evaluating a project or asset for potential acquisition",
+                "cta": "Select Buyer"
+            }
+        },
+        "steps": {
+            "projectIdentity": "Project Identity",
+            "scopeIntelligence": "Scope & Intelligence",
+            "financialStrategy": "Financial Strategy",
+            "analysisDashboard": "Analysis Dashboard"
+        },
+        "step1": {
+            "title": "Project Identity",
+            "subtitle": "Define the core parameters of your estimation context.",
+            "analysisType": "Analysis Type",
+            "fullAnalysis": "Full Analysis",
+            "riskAssessment": "Risk Assessment",
+            "recommended": "Recommended",
+            "businessType": "Business Type",
+            "businessPlaceholder": "e.g. Design Agency, Construction Firm...",
+            "targetCountry": "Target Country",
+            "currency": "Currency",
+            "projectDistance": "Project Distance",
+            "remoteDelivery": "Remote Delivery",
+            "remoteSubtitle": "Off-site execution",
+            "onsiteDelivery": "On-site Delivery",
+            "onsiteSubtitle": "Requires physical presence",
+            "continueToScope": "Continue to Scope"
+        },
+        "step2": {
+            "title": "Scope & Intelligence",
+            "subtitle": "Define the project scope and leverage AI for risk detection.",
+            "clientType": "Client Type",
+            "clientGov": "Government Entity (Public Sector)",
+            "clientSemi": "Semi-Government / PIF Company",
+            "clientPriv": "Private Sector Enterprise",
+            "description": "Project Description & Scope",
+            "descriptionPlaceholder": "Describe the key deliverables, constraints, and objectives...",
+            "aiIntelligence": "AI Intelligence",
+            "clickToAdd": "Click to add common scope items",
+            "suggestion1": "Includes full architectural design",
+            "suggestion2": "Requires LEED certification",
+            "suggestion3": "High-security clearance required",
+            "suggestion4": "Includes 3-year maintenance contract",
+            "suggestion5": "Multi-phase rollout strategy",
+            "continueToFinancials": "Continue to Financials"
+        },
+        "step3": {
+            "title": "Financial Strategy",
+            "subtitle": "Set your cost baselines and target margins.",
+            "estimatedCost": "Estimated Cost (SAR)",
+            "targetMargin": "Target Margin %",
+            "advancedParams": "Advanced Financial Parameters",
+            "projectDuration": "Project Duration (Months)",
+            "retention": "Retention %",
+            "dealContext": "Deal Context / Strategic Importance",
+            "dealContextPlaceholder": "e.g. Critical for Q1 Goals",
+            "forcedPrice": "Forced Selling Price (SAR)",
+            "forcedPricePlaceholder": "Optional override",
+            "generateAnalysis": "Generate Analysis"
+        },
+        "step4": {
+            "title": "Analysis Report",
+            "subtitle": "AI-Generated Risk & Opportunity Assessment",
+            "exportReport": "Export Report",
+            "riskAssessment": "AI Risk Assessment",
+            "moderateRisk": "Moderate Risk",
+            "riskDescription": "Project has potential volatility due to undefined scope elements.",
+            "attentionRequired": "Attention Required",
+            "undefinedPayment": "Undefined Payment Terms",
+            "paymentDesc": "Defaulting to standard 60-day terms may impact cash flow.",
+            "aggressiveTimeline": "Aggressive Timeline",
+            "timelineDesc": "12 months is tight for the proposed scope.",
+            "costReasonableness": "Cost Reasonableness",
+            "estimated": "Estimated",
+            "marketAvg": "Market Avg",
+            "optimal": "OPTIMAL",
+            "marketDescription": "Your estimation aligns with current Riyadh market rates for similar government contracts.",
+            "hiddenScope": "Hidden Scope Detection",
+            "scope1": "Foundation design and execution requirements",
+            "scope2": "Crane rental for heavy equipment installation",
+            "scope3": "Third-party inspection & certification fees",
+            "commercialConclusion": "Commercial Conclusion",
+            "conclusionText": "The project is commercially viable but carries moderate execution risk. The recommended pricing structure allows for a healthy 25% margin, provided scope creep is managed aggressively via the contract terms.",
+            "profitable": "Profitable",
+            "operationallyComplex": "Operationally Complex",
+            "recommendedActions": "Recommended Actions",
+            "action1": "Include strict change order clause in contract",
+            "action2": "Verify site access availability before mobilization",
+            "action3": "Secure back-to-back warranty from suppliers",
+            "riskLegend": "Risk Severity Legend:",
+            "critical": "Critical",
+            "major": "Major",
+            "moderate": "Moderate",
+            "low": "Low",
+            "saveProject": "Save Project",
+            "generateContract": "Generate Contract",
+            "generateProposal": "Generate Proposal"
+        }
+    },
+    "projects": {
+        "title": "My Projects",
+        "subtitle": "Manage your saved project assessments",
+        "newAssessment": "New Assessment",
+        "allProjects": "All Projects",
+        "draft": "Draft",
+        "inProgress": "In Progress",
+        "completed": "Completed",
+        "noProjects": "No projects found",
+        "noProjectsDescription": "You haven't created any assessments yet.",
+        "startFirst": "Start Your First Assessment",
+        "view": "View",
+        "continue": "Continue",
+        "updated": "Updated"
+    },
+    "common": {
+        "loading": "Loading..."
+    },
+    "contact": {
+        "title": "Get In Touch",
+        "subtitle": "Have questions about Estimify? We'd love to hear from you. Send us a message and we'll respond as quickly as possible.",
+        "formTitle": "Contact Form",
+        "fullName": "Full Name",
+        "email": "Email Address",
+        "subject": "Subject",
+        "message": "Message",
+        "sendMessage": "Send Message",
+        "infoTitle": "Contact Information",
+        "emailLabel": "Email Address",
+        "phoneLabel": "Phone",
+        "locationLabel": "Location"
+    }
+}

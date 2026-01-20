@@ -1,5 +1,7 @@
-import { Inter } from "next/font/google";
+import { Inter, Noto_Sans_Arabic } from "next/font/google";
 import "./globals.css";
+import { Header } from "./components/layout/Header";
+import { I18nProvider } from "./lib/i18n";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -7,7 +9,11 @@ const inter = Inter({
   display: "swap",
 });
 
-import { Header } from "./components/layout/Header";
+const notoArabic = Noto_Sans_Arabic({
+  subsets: ["arabic"],
+  variable: "--font-arabic",
+  display: "swap",
+});
 
 export default function RootLayout({
   children,
@@ -15,10 +21,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.variable} antialiased bg-[#0B1120]`}>
-        <Header />
-        {children}
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${inter.variable} ${notoArabic.variable} antialiased bg-[#0B1120]`}>
+        <I18nProvider>
+          <Header />
+          {children}
+        </I18nProvider>
       </body>
     </html>
   );

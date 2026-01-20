@@ -2,8 +2,8 @@
 
 import React from 'react';
 import { Button } from '@/app/ui/Button';
-import { Input } from '@/app/ui/Input';
 import { Card } from '@/app/ui/Card';
+import { useI18n } from '@/app/lib/i18n';
 
 const ContactInfoItem = ({ icon, title, content }: { icon: React.ReactNode, title: string, content: string }) => (
     <div className="flex gap-4 items-start">
@@ -18,14 +18,15 @@ const ContactInfoItem = ({ icon, title, content }: { icon: React.ReactNode, titl
 );
 
 export default function ContactPage() {
+    const { t } = useI18n();
+
     return (
         <main className="min-h-screen bg-[#0B1120] pt-20 pb-20">
             {/* Header Section */}
             <div className="text-center space-y-4 mb-16 container mx-auto px-4">
-                <h1 className="text-4xl md:text-5xl font-bold text-white">Get In Touch</h1>
+                <h1 className="text-4xl md:text-5xl font-bold text-white">{t("contact.title")}</h1>
                 <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-                    Have questions about Estimify? We'd love to hear from you. <br className="hidden md:block" />
-                    Send us a message and we'll respond as quickly as possible.
+                    {t("contact.subtitle")}
                 </p>
             </div>
 
@@ -35,38 +36,38 @@ export default function ContactPage() {
                     {/* Contact Form Section (Left - Wider) */}
                     <div className="lg:col-span-2">
                         <Card className="bg-[#131B2C] border-white/5 p-8 h-full">
-                            <h2 className="text-2xl font-bold text-white mb-8">Contact Form</h2>
+                            <h2 className="text-2xl font-bold text-white mb-8">{t("contact.formTitle")}</h2>
                             <form className="space-y-6">
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-400 mb-2">Full Name</label>
+                                    <label className="block text-sm font-medium text-gray-400 mb-2">{t("contact.fullName")}</label>
                                     <input
                                         type="text"
                                         className="w-full px-4 py-3 rounded-lg bg-[#0F1623] border border-white/10 text-white focus:outline-none focus:border-[#00B8DB] transition-colors"
                                     />
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-400 mb-2">Email Address</label>
+                                    <label className="block text-sm font-medium text-gray-400 mb-2">{t("contact.email")}</label>
                                     <input
                                         type="email"
                                         className="w-full px-4 py-3 rounded-lg bg-[#0F1623] border border-white/10 text-white focus:outline-none focus:border-[#00B8DB] transition-colors"
                                     />
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-400 mb-2">Subject</label>
+                                    <label className="block text-sm font-medium text-gray-400 mb-2">{t("contact.subject")}</label>
                                     <input
                                         type="text"
                                         className="w-full px-4 py-3 rounded-lg bg-[#0F1623] border border-white/10 text-white focus:outline-none focus:border-[#00B8DB] transition-colors"
                                     />
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-400 mb-2">Message</label>
+                                    <label className="block text-sm font-medium text-gray-400 mb-2">{t("contact.message")}</label>
                                     <textarea
                                         rows={6}
                                         className="w-full px-4 py-3 rounded-lg bg-[#0F1623] border border-white/10 text-white focus:outline-none focus:border-[#00B8DB] transition-colors resize-none"
                                     />
                                 </div>
                                 <Button fullWidth className="bg-[#00B8DB] hover:bg-[#00B8DB]/90 text-white py-6 text-base mt-2">
-                                    Send Message
+                                    {t("contact.sendMessage")}
                                 </Button>
                             </form>
                         </Card>
@@ -75,10 +76,10 @@ export default function ContactPage() {
                     {/* Contact Information Section (Right - Narrower) */}
                     <div className="lg:col-span-1">
                         <Card className="bg-[#131B2C] border-white/5 p-8 h-full">
-                            <h2 className="text-xl font-bold text-white mb-8">Contact Information</h2>
+                            <h2 className="text-xl font-bold text-white mb-8">{t("contact.infoTitle")}</h2>
                             <div className="space-y-8">
                                 <ContactInfoItem
-                                    title="Email Address"
+                                    title={t("contact.emailLabel")}
                                     content="hello@estimify.co"
                                     icon={
                                         <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -87,7 +88,7 @@ export default function ContactPage() {
                                     }
                                 />
                                 <ContactInfoItem
-                                    title="Phone"
+                                    title={t("contact.phoneLabel")}
                                     content="+1 (800) ESTIMIFY"
                                     icon={
                                         <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -96,7 +97,7 @@ export default function ContactPage() {
                                     }
                                 />
                                 <ContactInfoItem
-                                    title="Location"
+                                    title={t("contact.locationLabel")}
                                     content="San Francisco, CA"
                                     icon={
                                         <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
