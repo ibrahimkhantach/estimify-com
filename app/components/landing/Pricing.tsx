@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Button } from '@/app/ui/Button';
 import { useI18n } from '@/app/lib/i18n';
 
-const PricingCard = ({ title, price, features, recommended = false, ctaText }: any) => (
+const PricingCard = ({ title, price, features, recommended = false, ctaText, subtitle }: any) => (
     <div className={`relative flex flex-col p-6 sm:p-8 rounded-2xl border transition-all duration-300 h-full
         ${recommended
             ? 'bg-[#131B2C] border-[#00B8DB] shadow-2xl shadow-[#00B8DB]/10 md:scale-105 z-10'
@@ -24,7 +24,7 @@ const PricingCard = ({ title, price, features, recommended = false, ctaText }: a
                     <span className="text-2xl sm:text-3xl font-bold text-white">{price}</span>
                 </div>
             ) : (
-                <span className="text-gray-400">Perfect for initial evaluation</span>
+                <span className="text-gray-400">{subtitle}</span>
             )}
         </div>
 
@@ -70,6 +70,8 @@ export const Pricing: React.FC = () => {
                             t("pricing.freePreview.features.2")
                         ]}
                         ctaText={t("pricing.freePreview.cta")}
+                        subtitle={t("pricing.freePreview.subtitle")}
+
                     />
                     <PricingCard
                         title={t("pricing.fullReport.title")}

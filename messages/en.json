@@ -15,7 +15,7 @@
     },
     "about": {
         "title": "About Estimify",
-        "description": "Estimify is revolutionizing construction project evaluation by combining advanced analysis with deep industry expertise. We empower construction professionals, financial institutions, and project developers to make data-driven commercial decisions with unprecedented confidence and clarity."
+        "description": "Estimify is revolutionizing project evaluation by combining advanced analysis with deep industry expertise. We empower professionals, financial institutions, and project developers to make data-driven commercial decisions with unprecedented confidence and clarity."
     },
     "features": {
         "title": "How Estimify Works",
@@ -63,7 +63,7 @@
         }
     },
     "footer": {
-        "tagline": "Empowering construction professionals to make data-driven commercial decisions with confidence.",
+        "tagline": "Empowering professionals to make data-driven commercial decisions with confidence.",
         "quickLinks": "Quick Links",
         "getStarted": "Get Started",
         "readyText": "Ready to transform your project estimation?",
@@ -82,7 +82,7 @@
             "subtitle": "Choose your role to get a personalized assessment experience.",
             "seller": {
                 "title": "I'm a Seller",
-                "description": "Selling a project, asset, or construction business",
+                "description": "Selling a project, asset, or business",
                 "cta": "Select Seller"
             },
             "buyer": {
